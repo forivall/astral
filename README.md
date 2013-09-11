@@ -107,18 +107,19 @@ Browserify has the option to include your own transforms that get run before Bro
 The downside of this system is that you can't easily use these transforms if you're not using Browserify.
 Ideally, Browserify could be built on top of Astral.
 
-#### [ngmin](https://github.com/btford/ngmin)
-ngmin does transforms on AngularJS apps to make the source easier to minify.
-Ideally, ngmin could also be built on top of Astral.
-The advantage to this is that it would be easier and faster to combine a build process using both ngmin and Browserify.
-Currently, both of these tools separately read files, parse into an AST, generate code form the AST, and save back to a file.
-
 #### [Grunt](http://gruntjs.com/)
 Grunt is a task runner.
 It is often used as a build tool, concatenating and minifying files.
 Grunt typically runs on a per-file basis, which makes it great for a wide variety of cases, but a poor choice for source transforms since you typically end up reading/writing the same file multiple times.
 You can think of Astral as "Grunt tasks, but for ASTs instead of files."
 You could write a Grunt task to run Astral passes to integrate the two.
+
+### Projects that make use of astral
+
+#### [ngmin](https://github.com/btford/ngmin)
+ngmin does transforms on AngularJS apps to make the source easier to minify.
+It uses [astral-angular-annotate](https://github.com/btford/astral-angular-annotate) at its
+core.
 
 ## License
 MIT
