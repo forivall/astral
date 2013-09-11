@@ -114,7 +114,7 @@ Grunt typically runs on a per-file basis, which makes it great for a wide variet
 You can think of Astral as "Grunt tasks, but for ASTs instead of files."
 You could write a Grunt task to run Astral passes to integrate the two.
 
-### Projects that make use of astral
+## Projects that make use of astral
 
 #### [ngmin](https://github.com/btford/ngmin)
 ngmin does transforms on AngularJS apps to make the source easier to minify.
